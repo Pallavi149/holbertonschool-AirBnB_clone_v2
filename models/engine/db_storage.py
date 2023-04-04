@@ -48,8 +48,8 @@ class DBStorage:
 
         # scoped_session to ensure thread_safety when creates a new database
         # session
-        self.__session = scoped_session(sessionmaker(bind=self.__engine,
-            expire_on_commit=False))
+        self.__session = scoped_session(sessionmaker(
+            bind=self.__engine, expire_on_commit=False))
 
     def all(self, cls=None):
         dictionary = {}
@@ -91,5 +91,5 @@ class DBStorage:
         Base.metadata.create_all(self.__engine)
         # scoped_session to ensure thread_safety when creates a new database
         # session
-        self.__session = scoped_session(sessionmaker(bind=self.__engine,
-            expire_on_commit=False))
+        self.__session = scoped_session(
+            sessionmaker(bind=self.__engine, expire_on_commit=False))

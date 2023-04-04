@@ -149,7 +149,6 @@ class HBNBCommand(cmd.Cmd):
                     continue
             params[key] = value
 
-
         # Create the instance
         params['updated_at'] = datetime.now().isoformat()
         params['created_at'] = datetime.now().isoformat()
@@ -353,6 +352,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
